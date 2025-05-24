@@ -3,6 +3,8 @@
 
 Το **diavgeia-visualization** είναι μια εφαρμογή React που απεικονίζει δεδομένα από το πρόγραμμα Διαύγεια. Χρησιμοποιεί διάφορες βιβλιοθήκες και εργαλεία για την ανάπτυξη, τον έλεγχο και την παρουσίαση δεδομένων.
 
+![Diavgeia Visualization Screenshot](screenshots/diavgeia-visualization-acts.png)
+
 ## Περιεχόμενα
 
 - [Περιγραφή](#περιγραφή)

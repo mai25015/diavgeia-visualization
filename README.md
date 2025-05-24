@@ -108,5 +108,5 @@ node proxy.js
   - Axios (^1.9.0)
   
 - **CSS**:
-  - Tailwind CSS (μέσω PostCSS)## Διαθέσιμες Εντολές
+  - Tailwind CSS (μέσω PostCSS)
 

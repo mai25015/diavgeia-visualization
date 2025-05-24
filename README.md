@@ -1,76 +1,70 @@
-# diavgeia-visualization
+# Getting Started with Create React App
 
-Το **diavgeia-visualization** είναι μια εφαρμογή React που απεικονίζει δεδομένα από το πρόγραμμα Διαύγεια. Χρησιμοποιεί διάφορες βιβλιοθήκες και εργαλεία για την ανάπτυξη, τον έλεγχο και την παρουσίαση δεδομένων.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Περιεχόμενα
+## Available Scripts
 
-- [Περιγραφή](#περιγραφή)
-- [Εγκατάσταση](#εγκατάσταση)
-- [Διαθέσιμες Εντολές](#διαθέσιμες-εντολές)
-- [Τεχνολογίες](#τεχνολογίες)
-- [Αρχεία Παραμετροποίησης](#αρχεία-παραμετροποίησης)
-- [Άδεια Χρήσης](#άδεια-χρήσης)
+In the project directory, you can run:
 
----
+### `npm start`
 
-## Περιγραφή
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Η εφαρμογή χρησιμοποιεί **React** για το frontend και παρέχει διεπαφή χρήστη για την προβολή και επεξεργασία δεδομένων. Χρησιμοποιεί το **Axios** για αιτήματα API και την **Recharts** για την απεικόνιση δεδομένων.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
----
+### `npm test`
 
-## Εγκατάσταση
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Clone:
+### `npm run build`
 
-```bash
-git clone https://github.com/mai25015/diavgeia-visualization.git
-cd diavgeia-visualization
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Install:
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```bash
-npm install
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Run:
+### `npm run eject`
 
-```bash
-npm start
-```
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## Διαθέσιμες Εντολές
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-- **`npm start`**  
-  Εκκινεί την εφαρμογή σε περιβάλλον ανάπτυξης.
-  
-- **`npm run build`**  
-  Δημιουργεί ένα production build στον φάκελο `build`.
-  
-- **`npm test`**  
-  Εκτελεί τις δοκιμές της εφαρμογής.
-  
-- **`npm run eject`**  
-  Αποκαλύπτει τη διαμόρφωση του `react-scripts`.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## Τεχνολογίες
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-- **Frontend**:
-  - React (^19.1.0)
-  - React Router DOM (^7.6.0)
-  - Recharts (^2.15.3)
-  
-- **Backend / API Proxy**:
-  - cors / cors-anywhere
-  
-- **Testing**:
-  - @testing-library/react
-  - @testing-library/jest-dom
-  - @testing-library/user-event
-  
-- **Διαχείριση Αιτημάτων**:
-  - Axios (^1.9.0)
-  
-- **CSS**:
-  - Tailwind CSS (μέσω PostCSS)
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -25,7 +25,7 @@
 Clone:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/mai25015/diavgeia-visualization.git
 cd diavgeia-visualization
 ```
 

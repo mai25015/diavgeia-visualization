@@ -1,70 +1,110 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# diavgeia-visualization
 
-## Available Scripts
+Το **diavgeia-visualization** είναι μια εφαρμογή React που απεικονίζει δεδομένα από το πρόγραμμα Διαύγεια. Χρησιμοποιεί διάφορες βιβλιοθήκες και εργαλεία για την ανάπτυξη, τον έλεγχο και την παρουσίαση δεδομένων.
 
-In the project directory, you can run:
+## Περιεχόμενα
 
-### `npm start`
+- [Περιγραφή](#περιγραφή)
+- [Εγκατάσταση](#εγκατάσταση)
+- [Διαθέσιμες Εντολές](#διαθέσιμες-εντολές)
+- [Τεχνολογίες](#τεχνολογίες)
+- [Αρχεία Παραμετροποίησης](#αρχεία-παραμετροποίησης)
+- [Άδεια Χρήσης](#άδεια-χρήσης)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Περιγραφή
 
-### `npm test`
+Η εφαρμογή χρησιμοποιεί **React** για το frontend και παρέχει διεπαφή χρήστη για την προβολή και επεξεργασία δεδομένων. Χρησιμοποιεί το **Axios** για αιτήματα API και την **Recharts** για την απεικόνιση δεδομένων.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Εγκατάσταση
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone <repository-url>
+cd diavgeia-visualization
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install:
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Run:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Εκκίνηση Proxy Server
 
-## Learn More
+Η εφαρμογή περιλαμβάνει έναν **Express proxy server** για ασφαλή πρόσβαση στο API του Διαύγεια. Ο proxy υποστηρίζει:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+✅ **CORS**  
+✅ **Rate limiting** (10 αιτήματα/δευτερόλεπτο)  
+✅ **Queueing** (μέχρι 5 ταυτόχρονες αιτήσεις)  
+✅ **Βασικό authentication** για επιτρεπόμενα domains
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Παράδειγμα εκκίνησης proxy
 
-### Code Splitting
+```bash
+node proxy.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Test API vs Production API
 
-### Analyzing the Bundle Size
+Ο proxy server είναι παραμετροποιημένος για να υποστηρίζει δύο διαφορετικά endpoints:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Test API**:  
+  `https://test3.diavgeia.gov.gr`  
+  - Χρησιμοποιείται για ανάπτυξη και δοκιμές.  
+  - Απαιτεί authentication (basic auth).  
 
-### Making a Progressive Web App
+- **Production API**:  
+  `https://diavgeia.gov.gr`  
+  - Χρησιμοποιείται για κανονική λειτουργία σε παραγωγικό περιβάλλον.  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Διαθέσιμες Εντολές
 
-### Advanced Configuration
+- **`npm start`**  
+  Εκκινεί την εφαρμογή σε περιβάλλον ανάπτυξης.
+  
+- **`npm run build`**  
+  Δημιουργεί ένα production build στον φάκελο `build`.
+  
+- **`npm test`**  
+  Εκτελεί τις δοκιμές της εφαρμογής.
+  
+- **`npm run eject`**  
+  Αποκαλύπτει τη διαμόρφωση του `react-scripts`.
+  
+- **`node proxy.js`**  
+  Εκκινεί τον proxy server για αιτήματα στο API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Τεχνολογίες
 
-### Deployment
+- **Frontend**:
+  - React (^19.1.0)
+  - React Router DOM (^7.6.0)
+  - Recharts (^2.15.3)
+  
+- **Backend / API Proxy**:
+  - cors / cors-anywhere
+  
+- **Testing**:
+  - @testing-library/react
+  - @testing-library/jest-dom
+  - @testing-library/user-event
+  
+- **Διαχείριση Αιτημάτων**:
+  - Axios (^1.9.0)
+  
+- **CSS**:
+  - Tailwind CSS (μέσω PostCSS)## Διαθέσιμες Εντολές
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
